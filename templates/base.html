@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/study.png' %}" type="image/x-icon"> 
+
+    <title>Document</title>
+    <style>
+        h1,h2,span,label {
+            text-transform: uppercase;
+            font-family: verdana;
+            font-size: 2em;
+            color: #00fc69;
+            text-shadow: 1px 1px 1px #2d6b47,
+                1px 2px 1px #2d6b47,
+                1px 3px 1px #2d6b47,
+                1px 4px 1px #2d6b47,
+                1px 5px 1px #2d6b47,
+                1px 6px 1px #2d6b47,
+                1px 7px 1px #2d6b47,
+                1px 8px 1px #2d6b47,
+                1px 9px 1px #2d6b47,
+                1px 10px 1px #2d6b47,
+                1px 18px 6px rgba(16, 16, 16, 0.4),
+                1px 22px 10px rgba(16, 16, 16, 0.2),
+                1px 25px 35px rgba(16, 16, 16, 0.2),
+                1px 30px 60px rgba(16, 16, 16, 0.4);
+        }
+        body {
+            background-color: #c4c4c4;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fde400;">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+                <img src="{% static 'img/study.png' %}" width="50" height="50" alt="">
+      
+        IStudy</a>
+        </div>
+      </nav>
+
+        {% block bodyblock %}
+
+        {% endblock bodyblock %}
+
+    <!-- Bootstrap JS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

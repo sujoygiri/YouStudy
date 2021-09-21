@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block bodyblock %}
+<div class="d-grid gap-2 col-8 mx-auto">
+    <div class="mt-4">
+        <h1>This Is A Simple Marks Prediction Web App</h1>
+        <h1 class="mt-4" style="color: rgb(221, 245, 3);">This App Can Predict Your Marks Based Upon Your Study Hour Using Machine Learning</h1>
+        <h1 class="mt-4" style="color: rgb(221, 245, 3);">So Choose Your Study Hour Between 1 to 8</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label style="color: rgb(235, 43, 235);" for="study_hour" class="mt-4 form-label">Enter Your Study Hour</label>
+            <input type="number" value="{{studyhour}}" name="s_hour" class="form-control" id="study_hour" min="1" max="8" >
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="submit" class="btn btn-success mt-3">Predict</button>
+            </div>
+        </form>
+    </div>
+    <div class="d-grid gap-1 col-6 mx-auto mt-4">
+        <h2 style="color: rgb(219, 141, 24);">You Can Get Aprox <span style="color: chartreuse;"> {{predicted_mark}} </span> Marks</h2>
+    </div>
+</div>
+
+{% endblock bodyblock %}
