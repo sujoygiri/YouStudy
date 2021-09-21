@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT note_taking.wsgi:application
+web: waitress-serve --port=$PORT smp_ml.wsgi:application
